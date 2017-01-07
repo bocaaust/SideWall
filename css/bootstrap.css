@@ -6761,4 +6761,6 @@ button.close {
     display: none !important;
   }
 }
+.jobSection > li { color:black; margin-left:0px;list-style: square outside url("../img/x.png");}
+
 /*# sourceMappingURL=bootstrap.css.map */
