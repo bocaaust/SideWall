@@ -86,8 +86,16 @@
                          </ul>
                          </div>
                          
-				<div class="tab-content" style="margin-top:57px;margin-bottom:57px;">
+				<div class="tab-content" style="margin-top:57px;margin-bottom:20vh;">
                	  <div id="jobsMain" class="tab-pane fade in active">
+                  <!--Search Implementation-->
+                        <form class="form-search">
+    
+    <div class="input-prepend">
+        <button type="submit" class="btn" style="width:20vw;margin-left:3vw;">Search</button>
+        <input type="text" class="span2 search-query" style="width:70vw;">
+    </div>
+</form>
                    	<h4>Recent</h4>
                         <form>
                         <div class="row">
@@ -124,12 +132,11 @@
 </div>
 </div>
 <div clas="row">
-<div class="row" style="margin-top:4px;display:block;">
+<div class="row" style="margin-top:8px;display:block;">
                         <div class="col-xs-1 col-xs-offset-1" >
                         <div class="checkbox" >
   <label><input type="checkbox" value=""><a style="display:none;">"ID:1234</a></label>
 </div>
-<hr>
 </div>
 <div class="col-xs-2">
 	<!--<div id="gmap" class="mapBox"></div>
@@ -157,8 +164,21 @@
 </div>
 </div>
 </div>
+<!--Collaps Items Below-->
+<div class="row" style="margin-top:16px; display:block; margin-left:-3px;">
+<div class="col-xs-2 col-xs-offset-4">
+	<a data-toggle="collapse" data-target="#moreJobItems">
+    	
+		<img src="img/more.png" class="img-responsive" alt="Show More" style="width:100%; height:8vw; opacity:0.8; filter: opacity(80);">
+        
+    </a>
+    
+</div>
+</div>
+
+<div class="collapse" id="moreJobItems">
 <div class="row">
-<div class="row" style="margin-top:4px; display:block; margin-left:-3px;">
+<div class="row" style="margin-top:8px; display:block; margin-left:-3px;">
                         <div class="col-xs-1 col-xs-offset-1" >
                         <div class="checkbox" >
   <label><input type="checkbox" value=""><a style="display:none;">"ID:1234</a></label>
@@ -190,7 +210,11 @@
 </div>
 </div>
 </div>
+</div>
+
+
                         </form>
+                        
                     </div>
                     <div id="Collection" class="tab-pane fade in">
                     	<h4>Collection</h4>
