@@ -1772,9 +1772,7 @@ pre code {
 .col-xs-offset-1 {
   margin-left: 8.33333333%;
 }
-.col-xs-offset-1-5 {
-	margin-left: 8.33%
-}
+
 .col-xs-offset-0 {
   margin-left: 0;
 }
@@ -6772,4 +6770,5 @@ button.close {
 .topBar .active {border-bottom:solid 4px #b2b2b2; background-color:#f9f9f9}
 .topBar > li > h4 {padding-bottom:6px; color:gray; margin-right:0px;}
 .topBar .active h4 {padding-bottom:4px; color:black; margin-right:0px;}
+.mapBox {width:100%;height:25vh;}
 /*# sourceMappingURL=bootstrap.css.map */
