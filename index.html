@@ -32,25 +32,25 @@
 	<script src="js/bootstrap.js"></script>
     <div class="container-fluid" style="overflow-x:hidden;">
   <div class="row" >
-    	<div class="container" style="bottom:-1.5vh; height:16vh; background-color:#f9f9f9;border-bottom:solid 1px #b2b2b2; position: fixed; width:100%; z-index:2;">
+    	<div class="container" style="bottom:-1.5vh; height:16vh; background-color:#f9f9f9;border-bottom:solid 1px #b2b2b2; position: fixed; width:100%; z-index:2;padding:0px;">
 	
-    	<ul class="nav imgButton">
+    	<ul class="nav imgButton" style="margin-left:0px;">
        
-       <div class="col-xs-2 col-xs-offset-1 col-sm-3" style="padding-top:3vh; padding-bottom:3vh;">
+       <div class="col-xs-2 col-sm-offset-0 col-xs-offset-1 col-sm-4" style="padding-top:3vh; padding-bottom:3vh; margin-right:10%;">
         <li>
     	
-        	<a data-toggle="tab" href="#job" >
-        	<img src="img/job.png" style="height:10vh; padding-left:50%;">
+        	<a data-toggle="tab" href="#job" style="z-index:4" >
+        	<img src="img/job.png" style="height:10vh; padding-left:70%;">
             </a>
         
         </li>
         </div>
         
-        <div class="col-xs-2 col-xs-offset-1" style="padding-top:3vh;padding-bottom:3vh;">
-        <li class="active" >
+        <div class="col-xs-2" style="padding-top:3vh;padding-bottom:3vh; width: 20.333333%;">
+        <li class="active col-sm-offset-2 col-xs-offset-3 col">
     	
         	<a data-toggle="tab" href="#home" >
-        	<img src="img/home.png" style="height:10vh; padding-left:30%;">
+        	<img src="img/home.png" style="height:10vh;">
             </a>
         
         </li>
@@ -60,7 +60,7 @@
         <li>
     	
         	<a data-toggle="tab" href="#map" >
-        	<img src="img/map.png" style="height:10vh; padding-left:50%;">
+        	<img src="img/map.png" style="height:10vh;">
             </a>
         
         </li>
@@ -87,8 +87,20 @@
                          </div>
                          
 				<div class="tab-content" style="margin-top:57px;">
-                	<div id="jobsMain" class="tab-pane fade in active">
-                    	<h4>Jobs</h4>
+               	  <div id="jobsMain" class="tab-pane fade in active">
+                   	<h4>Recent</h4>
+                        <form>
+                        <div clas="row">
+                        <div class="col-sm-1">
+                        <div class="checkbox">
+  <label><input type="checkbox" value=""><a style="display:none;">"ID:1234</a></label>
+</div>
+</div>
+<div class="col-sm-2">
+	<img class="img-circle" width="100%" alt="map">
+</div>
+</div>
+                        </form>
                     </div>
                     <div id="Collection" class="tab-pane fade in">
                     	<h4>Collection</h4>
@@ -99,7 +111,7 @@
                          <div id="map" class="tab-pane fade in ">
                          <h4>Map</h4>
                          </div>
-                         </div>
+      </div>
 </div>
                
             
@@ -111,7 +123,10 @@
 	$(".imgButton .col-xs-2 li").on("click", function(){
 		//var selector2 =  $this.attr('href')
    $(".imgButton .col-xs-2 li").removeClass("active");
+    $(".imgButton .col-xs-4 li").removeClass("active");
    //$(this).addClass("active");
 });
+
+
 
 </script>
