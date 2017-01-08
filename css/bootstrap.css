@@ -6762,7 +6762,11 @@ button.close {
   }
 }
 .jobSection > li { color:black; margin-left:0px;list-style: square outside url("../img/x.png");}
-.imgButton > a  {opacity:0.3; filter:opacity(30);}
-.imgButton > a:hover {opacity:0.5; filter:opacity(50);}
-.imgButton> a:active {opacity:1.0; filter:opacity(100);}
+.imgButton .col-xs-2 > li {opacity:0.3; filter:opacity(30);}
+
+.imgButton .col-xs-2 .active, .imgButton .col-xs-2 .active:hover {opacity:1.0; filter:opacity(100);}
+.topBar > li {border-bottom:solid 2px #b2b2b2; background-color:#f9f9f9}
+.topBar .active {border-bottom:solid 4px #b2b2b2; background-color:#f9f9f9}
+.topBar > li > h4 {padding-bottom:6px; color:gray; margin-right:0px;}
+.topBar .active h4 {padding-bottom:4px; color:black; margin-right:0px;}
 /*# sourceMappingURL=bootstrap.css.map */
