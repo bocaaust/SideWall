@@ -75,19 +75,26 @@
                          <h4>Home</h4>
                          </div>
                          <div id="job" class="tab-pane fade in ">
-                         <div class="row text-center">
+                         <div class="row text-center" style="position:fixed; width:100%; top:0px;z-index:2; height:46.5px;">
                          <ul class="nav row topBar">
-                         <li class="active col-xs-6">
+                         <li class="active col-xs-6" style="height:46.5px;">
                          <h4 data-toggle="tab" href="#jobsMain" >Jobs</h4>
                          </li>
-                         <li class=" col-xs-6">
-                         <h4 data-toggle="tab" href="#jobsMain" >Collection</h4>
+                         <li class=" col-xs-6" style="height:46.5px;">
+                         <h4 data-toggle="tab" href="#Collection" >Collection</h4>
                          </li>
                          </ul>
-				<div class="tab-content" id="jobsMain">
-                
+                         </div>
+                         
+				<div class="tab-content" style="margin-top:57px;">
+                	<div id="jobsMain" class="tab-pane fade in active">
+                    	<h4>Jobs</h4>
+                    </div>
+                    <div id="Collection" class="tab-pane fade in">
+                    	<h4>Collection</h4>
+                    </div>
                 </div>
-    </div>
+
                          </div>
                          <div id="map" class="tab-pane fade in ">
                          <h4>Map</h4>
