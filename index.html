@@ -169,7 +169,7 @@
 
 	<a data-toggle="collapse" data-target="#moreJobItems">
     	
-		<img src="img/more.png" class="img-responsive" alt="Show More" style="width:6vw; height:3vw; opacity:0.8; filter: opacity(80); margin-left:46vw;">
+		<img src="img/more.png" class="img-responsive" alt="Show More" style="width:6vw; height:3vw; opacity:0.8; filter: opacity(80); margin-left:46vw;" id="arrow">
         
     </a>
     
@@ -240,6 +240,10 @@
    //$(this).addClass("active");
 });
 
-
+$('#moreJobItems').on('hidden.bs.collapse', function (event) {  
+  $('#arrow').attr("src","img/more.png");
+}).on('shown.bs.collapse', function (event) {
+  $('#arrow').attr("src","img/more2.png"); 
+});
 
 </script>
