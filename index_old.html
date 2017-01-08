@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Social Job Board and Ride Sharing Website Helping More People Get Jobs Regardless of Whether You Own a Car">
+  <meta name="keywords" content="Cars,Detroit,Jobs,Ridesharing,Opensource,Work,Regrowth">
+  <meta name="author" content="Austin Lubetkin">
     <title>SideWall</title>
     <!-- Bootstrap -->
 	<style type="text/css">
@@ -21,40 +24,40 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
   </head>
-  <body>
+  <body  style="background-color:#E2E5CC;">
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-1.11.3.min.js"></script>
 
 	<!-- Include all compiled plugins (below), or include individual files as needed --> 
 	<script src="js/bootstrap.js"></script>
-    <div class="container-fluid">
-  <div class="row" style="background-color:#E2E5CC;">
+    <div class="container-fluid" style="overflow-x:hidden;">
+  <div class="row" >
     	
-        	<div class="col-sm-10 col-sm-offset-1" style="overflow:hidden;">
+        	
             	<div class="row">
-                	<div class="col-sm-6" style="padding-top:10px; padding-bottom:8px;">
+                	<div class="col-sm-6 col-sm-offset-1" style="padding-top:10px; padding-bottom:8px;">
                     <div class="row">
-                    
+                    <div class="container-fluid">
                     <ul class="nav nav-pills">
                     	
-                    	<li class="active"><a data-toggle="pill" href="#home" style="margin-left:8px;"><b>SideWall</b></a></li>
+                    	<li class="active"><a data-toggle="pill" href="#home" style="margin-left:8px; color:black;"><b>SideWall</b></a></li>
   <li><a data-toggle="pill" href="#jobs" style="color:black;">Jobs</a></li>
   <li><a data-toggle="pill" href="#map" style="color:black;">Map</a></li>
   <li><a data-toggle="pill" href="#profile" style="color:black;">Profile</a></li>
                     </ul>
-                   
+                   </div>
                     </div>
                     </div>
                     
                 </div>
-              <hr style="border-color:#e5cce2;">
+              
             	<div class="container-fluid">
-                	<div class="col-sm-10 col-sm-offset-1" style="background-color:#f5f6ee; border-radius:4px;">
+                	<div class="col-sm-10 col-sm-offset-1" style="background-color:#f5f6ee; border-top:24px solid; border-color:#e5cce2;min-height:90vh;">
                     <div class="col-sm-8">
                     	<div class="tab-content">
                          <div id="home" class="tab-pane fade in active">
                          	<div class="row">
-                            <div class="container-fluid" style="background-color:black;">
+                            <div class="container-fluid" style="background-color:#333;">
                             <h1 style="color:#cfcce5;">SideWall</h1>
                             <h3 style="color:#cfcce5;">Regrowth, Ridesharing, Work</h3> 
                             </div>
@@ -127,9 +130,18 @@ to kneel down and pray for life eternal.</p>
                             </div>
                            </div>
                          </div>
+                         <div class="tab-pane fade in" id="jobs">
+                         
+                         </div>
+                         <div class="tab-pane fade in" id="map">
+                         
+                         </div>
+                         <div class="tab-pane fade in" id="profile">
+                         
+                         </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4" style="min-height:90vh;border-left:24px solid; border-color:#cce2e5;">
                     <h3>My List</h3>
                     <hr>
                     	<ul class="jobSection">
@@ -140,7 +152,7 @@ to kneel down and pray for life eternal.</p>
                         <h3>Hello Jane Doe</h3>
                         <div class="row">
                         	<div class="col-sm-4">
-                            	<img width="100%" alt="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png">
+                            	<img width="100%" alt="profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" style="max-width:50vw; width:100%;">
                               
                             </div>
                             <div class="col-sm-8">
@@ -154,7 +166,6 @@ to kneel down and pray for life eternal.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        
   </body>
 </html>
