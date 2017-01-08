@@ -39,7 +39,7 @@
        <div class="col-xs-2 col-xs-offset-2" style="padding-top:3vh; padding-bottom:3vh;">
         <li>
     	
-        	<a data-toggle="tab" href="#job">
+        	<a data-toggle="tab" href="#job" >
         	<img src="img/job.png" style="height:10vh; padding-left:30%;">
             </a>
         
@@ -49,7 +49,7 @@
         <div class="col-xs-2 col-xs-offset-1" style="padding-top:3vh;padding-bottom:3vh;">
         <li class="active" >
     	
-        	<a data-toggle="tab" href="#home">
+        	<a data-toggle="tab" href="#home" >
         	<img src="img/home.png" style="height:10vh; padding-left:30%;">
             </a>
         
@@ -59,7 +59,7 @@
         <div class="col-xs-2 col-xs-offset-1" style="padding-top:3vh;padding-bottom:3vh;">
         <li>
     	
-        	<a data-toggle="tab" href="#map">
+        	<a data-toggle="tab" href="#map" >
         	<img src="img/map.png" style="height:10vh; padding-left:30%;">
             </a>
         
@@ -70,7 +70,7 @@
     </div>
     </div>
     
-    <div class="tab-content">
+    <div class="tab-content" id="main">
                          <div id="home" class="tab-pane fade in active">
                          <h4>Home</h4>
                          </div>
@@ -78,13 +78,15 @@
                          <div class="row text-center">
                          <ul class="nav row topBar">
                          <li class="active col-xs-6">
-                         <h4 data-toggle="tab" href="#jobsMain">Jobs</h4>
+                         <h4 data-toggle="tab" href="#jobsMain" >Jobs</h4>
                          </li>
                          <li class=" col-xs-6">
-                         <h4 data-toggle="tab" href="#jobsMain">Collection</h4>
+                         <h4 data-toggle="tab" href="#jobsMain" >Collection</h4>
                          </li>
                          </ul>
-
+				<div class="tab-content" id="jobsMain">
+                
+                </div>
     </div>
                          </div>
                          <div id="map" class="tab-pane fade in ">
@@ -98,10 +100,11 @@
   </body>
 </html>
 
-<!--<script type="text/javascript">
+<script type="text/javascript">
 	$(".imgButton .col-xs-2 li").on("click", function(){
+		//var selector2 =  $this.attr('href')
    $(".imgButton .col-xs-2 li").removeClass("active");
-   $(this).addClass("active");
+   //$(this).addClass("active");
 });
 
-</script>-->
+</script>
