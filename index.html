@@ -30,7 +30,11 @@
 
 	<!-- Include all compiled plugins (below), or include individual files as needed --> 
 	<script src="js/bootstrap.js"></script>
-    <div class="container-fluid" style="overflow-x:hidden;">
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <div class="container-fluid" style="overflow-x:hidden;" ng-app="sideWallApp" ng-controller="sideWallCtrl">
   <div class="row" >
     	<div class="container" style="bottom:-1.5vh; height:16vh; background-color:#f9f9f9;border-bottom:solid 1px #b2b2b2; position: fixed; width:100%; z-index:2;padding:0px;">
 	
@@ -98,8 +102,11 @@
 </form>
                    	<h4>Recent</h4>
                         <form>
-                        <div class="row">
-                        <div class="row" style="display:block;margin-left:-3px;">
+                        <div class="row" ng-repeat="job in jobs">
+
+
+
+                        <div class="row" style="display:block;margin-left:-3px;" >
                         <div class="col-xs-1 col-xs-offset-1" style="margin-top:8.16vw; ">
                         <div class="checkbox" >
   <label><input type="checkbox" value=""><a style="display:none;">"ID:1234</a></label>
@@ -126,8 +133,8 @@
     <img class="img-circle" src="http://1.bp.blogspot.com/_tUsg4205_xs/S5ICiKzsyLI/AAAAAAAABHA/8bgYrJtNpyQ/s400/map-google.gif" alt="map" style="height:16.66666667vw; width:16.667vw;padding-left:0vw;">
 </div>
 <div class="col-xs-6" style="padding-right:0px;">
-	<h4>Seeking SECURITY MGR with 2 years of experience in security</h4>
-    <p>123 Weigh Way - 12 matching Routes</p> 
+	<h4>{{job.title}}</h4>
+    <p>{{job.address}} - {{job.numRoutes}} matching Routes</p> 
 </div>
 <div class="col-xs-1" style="margin-left:0px;padding-left:0px;">
 	<a data-toggle="collapse" data-target="#123info">
@@ -139,51 +146,14 @@
 <div class="infoBox collapse" id="123info">
 	<div class="col-xs-10 col-xs-offset-1">
     	<div class="container-fluid">
-        	<p>American Protection Group (APG) a rate A+ Business Member of the Better Business Bureau (BBB) is seeking a manager with a CLASS MB License OR individual that can qualify for a Class MB license for both A and B licenses that we already have.</p>
-
-<p>American Protection Group is expanding to the Florida market and is currently licensed in CA, NV, AZ and FL, now in the process of expanding to TX and NM.</p>
-
-<p>We are seeking a qualified applicant with a CLASS MB license or someone whom can take the exam and become our manager for the FL market.</p>
+        	<p>{{job.description}}</p>
         </div>
     </div>
 </div>
 </div>
 </div>
-<div clas="row">
-<div class="row" style="margin-top:8px;display:block;">
-                        <div class="col-xs-1 col-xs-offset-1" >
-                        <div class="checkbox" >
-  <label><input type="checkbox" value=""><a style="display:none;">"ID:1234</a></label>
-</div>
-</div>
-<div class="col-xs-2">
-	<!--<div id="gmap" class="mapBox"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('gmap'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEoptZSQamw508wzZu3Ds1zuCv0jdas_w&callback=initMap">
-    </script>-->
-    <img class="img-circle" src="http://1.bp.blogspot.com/_tUsg4205_xs/S5ICiKzsyLI/AAAAAAAABHA/8bgYrJtNpyQ/s400/map-google.gif" alt="map" width="100%">
-</div>
-<div class="col-xs-7">
-	<h4>Veterinary Technician/Assistant</h4>
-    <p>456 Play Place - 7 matching Routes</p> 
-</div>
-</div>
-</div>
 <!--Collaps Items Below-->
-<div class="row" style="margin-top:16px; display:block; margin-left:-3px;">
+<!--<div class="row" style="margin-top:16px; display:block; margin-left:-3px;">
 
 	<a data-toggle="collapse" data-target="#moreJobItems">
     	
@@ -218,16 +188,21 @@
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEoptZSQamw508wzZu3Ds1zuCv0jdas_w&callback=initMap">
-    </script>-->
+    </script>
     <img class="img-circle" src="http://1.bp.blogspot.com/_tUsg4205_xs/S5ICiKzsyLI/AAAAAAAABHA/8bgYrJtNpyQ/s400/map-google.gif" alt="map" width="100%">
 </div>
 <div class="col-xs-7">
 	<h4> Restaurant Crew Member, Shift Leader</h4>
     <p>123 Weigh Way - 12 matching Routes</p> 
 </div>
+
 </div>
+
 </div>
+
 </div>
+
+-->
 
 
                         </form>
