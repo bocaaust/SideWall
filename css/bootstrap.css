@@ -6789,5 +6789,10 @@ button.close {
   -moz-transform-origin:0 0;
   -webkit-transform-origin:0 0;
 }
-.infoBox {width:80vw; margin-left:10vw;display:block;margin-top:4px;}
+.infoBox {width:80vw; margin-left:10vw;margin-top:4px;}
+.rotate {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
 /*# sourceMappingURL=bootstrap.css.map */

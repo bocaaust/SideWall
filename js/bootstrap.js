@@ -603,6 +603,7 @@ if (typeof jQuery === 'undefined') {
 
     this.$trigger
       .removeClass('collapsed')
+	  .children("img").removeClass('rotate')
       .attr('aria-expanded', true)
 
     this.transitioning = 1
@@ -643,6 +644,7 @@ if (typeof jQuery === 'undefined') {
 
     this.$trigger
       .addClass('collapsed')
+	  .children("img").addClass('rotate')
       .attr('aria-expanded', false)
 
     this.transitioning = 1
