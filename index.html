@@ -78,7 +78,7 @@
     
     <div class="tab-content" id="main">
                          <div id="home" class="tab-pane fade in active">
-                         
+                         <!--
                          <div class="row" style="max-height:700px;; overflow:hidden;">
                          	<div class="col-xs-1" style="margin:0px; padding:0px;">
                             	<img src="img/square1.png" width="100%" alt="background">
@@ -94,9 +94,9 @@
                                 	<h1 style="display:inline;">SideWall </h1><h4 style="display:inline;">can connect people already in a community who need jobs and can't afford cars/transit with other members of that community who can rideshare on their way to jobs at similar locations. More people get jobs because more people can commute to the areas that are experiencing economic growth regardless of where they originally live in that city. People find jobs on our job board and can make "connections" with registered profiles/routes on a map that match their job criteria. They then can message other users profiles and work out details.</h4>
                                    
                                    <div class="row" style="margin-top:8px;">
-                                     <div class="container-fluid">
+                                     <div class="container-fluid">-->
                                    <!-- <div sp-login-form></div>-->
-                                    </div>
+                                    <!--</div>
                                      </div>
                                      </div>
                                 </div>
@@ -165,7 +165,42 @@
                          <img  class="animated fadeInUp zz show-desktop" src="img/detroit2.jpg" alt="detroit" style="position:fixed; z-index:4; width:15vw; right:30vw; top:35vh;">
                           <img  class="animated fadeInUp za show-desktop" src="img/detroit3.jpeg" alt="detroit" style="position:fixed; width:25vw; right:8vw; top:45vh;z-index:2;">
                          
-                        
+                        -->
+                        <div class="row" is-user>
+                        <div class="col-sm-7 col-sm-offset-0 col-xs-offset-0 col-xs-12">
+                        	<img src="https://www.dmxzone.com/downloads/images/Image013_16.png" width="100%" class="img-thumbnail animated zoomIn first">
+                        </div>
+                        <!--Driver Example-->
+                        <div class="col-xs-8 col-sm-3 col-xs-offset-2 col-sm-offset-1 mobile-center">
+                        <!--Profile Image-->
+                        	<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQN-VCcb_mrsPCwX2QgqGLQ6HYsiheBCym6cDbwcj9SY-fhPisJ" width="100%" class="img-circle img-thumbnail" style="margin-bottom:8px; margin-top:8px;">
+                            <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                        	<h4>Jane Doe</h4>
+                            <p>Registered Driver</p>
+                            <p>2011 Honda Prius</p>
+                            
+                            </div>
+                             <div class="col-xs-12  col-sm-6">
+                            <h4>Home</h4>
+                            <p>1234 Lane LN</p>
+                            <p>Detroit, MI, 00000</p>
+                            <h4>Work</h4>
+                            <p>1234 Street ST</p>
+                            <p>Detroit, MI, 00000</p>
+                        </div>
+                       </div>
+                        </div>
+                        </div>
+                        <div class="row" is-user>
+                        <!--<h4>Requests</h4>
+							<div class="row">
+                            	
+                            </div>-->
+                        </div>
+                        <div class="row" if-not-user>
+                        <div sp-login-form></div>
+                        </div>
                          </div>
                          <div id="job" class="tab-pane fade in ">
                          <div class="row text-center" style="position:fixed; width:100%; top:0px;z-index:2; height:46.5px;">
@@ -174,7 +209,7 @@
                          <h4 data-toggle="tab" href="#jobsMain" >Jobs</h4>
                          </li>
                          <li class=" col-xs-6" style="height:46.5px;">
-                         <h4 data-toggle="tab" href="#Collection" >Profile</h4>
+                         <h4 data-toggle="tab" href="#Collection" >Contact</h4>
                          </li>
                          </ul>
                          </div>
@@ -198,7 +233,7 @@
                         <div class="row" style="display:block;margin-left:-3px; margin-bottom:6px;" >
                         <div class="col-xs-1 col-xs-offset-1" style="margin-top:8.16vw; ">
                         <div class="checkbox" >
-  <label><input type="checkbox" value=""><a style="display:none;">"ID:1234</a></label>
+  <label><input type="checkbox" value=""><a style="display:none;">{{::$id}}</a></label>
 </div>
 </div>
 <div class="col-xs-2" style="padding:0px;">
@@ -299,32 +334,47 @@
                     </div>
                     <div id="Collection" class="tab-pane fade in">
                     	<div class="container-fluid">
-                    	
+                    	<h2>3 matching Routes</h2>
+             			<h4>Seeking SECURITY MGR with 2 years of experience in security</h4>
                         <div class="row">
-                        <div class="col-sm-7 col-sm-offset-0 col-xs-offset-0 col-xs-12">
-                        	<img src="https://www.dmxzone.com/downloads/images/Image013_16.png" width="100%" class="img-thumbnail animated zoomIn first">
-                        </div>
-                        <!--Driver Example-->
-                        <div class="col-xs-8 col-sm-3 col-xs-offset-2 col-sm-offset-1 mobile-center">
-                        <!--Profile Image-->
-                        	<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQN-VCcb_mrsPCwX2QgqGLQ6HYsiheBCym6cDbwcj9SY-fhPisJ" width="100%" class="img-circle img-thumbnail" style="margin-bottom:8px; margin-top:8px;">
-                            <div class="row">
-                            <div class="col-xs-12 col-sm-6">
-                        	<h4>Jane Doe</h4>
-                            <p>Registered Driver</p>
-                            <p>2011 Honda Prius</p>
-                            
+                        	<div class="col-xs-2 col-xs-offset-1">
+                            	<a href="do a maill to on email address"><img src="img/mail.png" width="100%"></a>
+                           
                             </div>
-                             <div class="col-xs-12  col-sm-6">
-                            <h4>Home</h4>
-                            <p>1234 Lane LN</p>
-                            <p>Detroit, MI, 00000</p>
-                            <h4>Work</h4>
-                            <p>1234 Street ST</p>
-                            <p>Detroit, MI, 00000</p>
+                            <div class="col-xs-8">
+                            	<p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN <i>(Within 0.5 miles of selected job)</i></p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                
+                            </div>
                         </div>
-                       </div>
+                        <div class="row">
+                        	<div class="col-xs-2 col-xs-offset-1">
+                            	<a href="do a maill to on email address"><img src="img/mail.png" width="100%"></a>
+                           
+                            </div>
+                            <div class="col-xs-8">
+                            	<p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN <i>(Within 0.5 miles of selected job)</i></p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                
+                            </div>
                         </div>
+                        <h4>Veterinary Technician/Assistant</h4>
+                        <div class="row">
+                        	<div class="col-xs-2 col-xs-offset-1">
+                            	<a href="do a maill to on email address"><img src="img/mail.png" width="100%"></a>
+                           
+                            </div>
+                            <div class="col-xs-8">
+                            	<p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN <i>(Within 0.5 miles of selected job)</i></p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                
+                            </div>
                         </div>
                       	<!--<img src="https://i.imgur.com/mM82YXg.png" class="img-responsive img-thumbnail" alt="Collection Map" style="width:50vw; margin-left:25vw;">-->
                         
