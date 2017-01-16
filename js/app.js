@@ -3,10 +3,14 @@ var app=angular.module("sideWallApp",['ngRoute','stormpath', 'stormpath.template
 app.config(
 
 function (STORMPATH_CONFIG,$routeProvider) {
+	
+	// Automatically add access token to all /api requests
+
+    STORMPATH_CONFIG.AUTO_AUTHORIZED_URIS.push(new RegExp('/api'));
 
     // Specify your Client API domain here:
 
-    STORMPATH_CONFIG.ENDPOINT_PREFIX = 'https://subtle-racer.apps.stormpath.io';
+    STORMPATH_CONFIG.ENDPOINT_PREFIX = 'https://lunar-general.apps.stormpath.io';
 	
 	 $routeProvider
     .when("/", {
