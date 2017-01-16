@@ -32,8 +32,10 @@
 	<script src="js/bootstrap.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
-
-
+    <script src="js/stormpath-sdk-angularjs.min.js"></script>
+	<script src="js/stormpath-sdk-angularjs.tpls.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<div ng-view>
     <div class="container-fluid" style="overflow-x:hidden;" ng-app="sideWallApp" ng-controller="sideWallCtrl">
   <div class="row" >
     	<div class="container" style="bottom:-1.5vh; height:16vh; background-color:#f9f9f9;border-bottom:solid 1px #b2b2b2; position: fixed; width:100%; z-index:2;padding:0px;">
@@ -76,7 +78,8 @@
     
     <div class="tab-content" id="main">
                          <div id="home" class="tab-pane fade in active">
-                         <div class="row" style="max-height:90vh; overflow:hidden;">
+                         
+                         <div class="row" style="max-height:700px;; overflow:hidden;">
                          	<div class="col-xs-1" style="margin:0px; padding:0px;">
                             	<img src="img/square1.png" width="100%" alt="background">
                                 <img src="img/square3.png" width="100%" alt="background">
@@ -85,9 +88,17 @@
                                 <img src="img/square1.png" width="100%" alt="background">
                             </div>
                             <div class="col-xs-11 col-sm-6">
-                            	<div class="row" style="background-color:#E5EFF0;">
+                           	  <div class="row" style="background-color:#E5EFF0;">
                                 	<div class="col-sm-10 col-sm-offset-1">
-                                	<h1 style="display:inline;">SideWall </h1><h4 style="display:inline;">can connect people already in a community who need jobs and can't afford cars/transit with other members of that community who can rideshare on their way to jobs at similar locations. More people get jobs because more people can commute to the areas that are experiencing economic growth regardless of where they originally live in that city. People find jobs on our job board and can make "connections" with registered profiles/routes on a map that match their job criteria. They then can message other users profiles and work out details.</h4></div>
+                                    
+                                	<h1 style="display:inline;">SideWall </h1><h4 style="display:inline;">can connect people already in a community who need jobs and can't afford cars/transit with other members of that community who can rideshare on their way to jobs at similar locations. More people get jobs because more people can commute to the areas that are experiencing economic growth regardless of where they originally live in that city. People find jobs on our job board and can make "connections" with registered profiles/routes on a map that match their job criteria. They then can message other users profiles and work out details.</h4>
+                                   
+                                   <div class="row" style="margin-top:8px;">
+                                     <div class="container-fluid">
+                                    <div sp-login-form></div>
+                                    </div>
+                                     </div>
+                                     </div>
                                 </div>
                                 <div class="row">
                                 	<div class="col-xs-3"  style="margin:0px; padding:0px;">
@@ -150,9 +161,9 @@
                             </div>
                          </div>
                          
-                         <img  class="animated fadeInUp da show-desktop" src="img/detroit1.jpg" alt="detroit" style="position:fixed; z-index:3; width:30vw; right:12vw; top:20vh;">
-                         <img  class="animated fadeInUp zz show-desktop" src="img/detroit2.jpg" alt="detroit" style="position:fixed; z-index:4; width:15vw; right:30vw; top:45vh;">
-                          <img  class="animated fadeInUp za show-desktop" src="img/detroit3.jpeg" alt="detroit" style="position:fixed; width:25vw; left:8vw; top:45vh;">
+                         <img  class="animated fadeInUp da show-desktop" src="img/detroit1.jpg" alt="detroit" style="position:fixed; z-index:3; width:30vw; right:12vw; top:10vh;">
+                         <img  class="animated fadeInUp zz show-desktop" src="img/detroit2.jpg" alt="detroit" style="position:fixed; z-index:4; width:15vw; right:30vw; top:35vh;">
+                          <img  class="animated fadeInUp za show-desktop" src="img/detroit3.jpeg" alt="detroit" style="position:fixed; width:25vw; right:8vw; top:45vh;z-index:2;">
                          
                         
                          </div>
@@ -304,7 +315,7 @@
       </div>
 </div>
                
-            
+            </div>
         
   </body>
 </html>

@@ -1,4 +1,28 @@
-var app=angular.module("sideWallApp",[]);
+var app=angular.module("sideWallApp",['ngRoute','stormpath', 'stormpath.templates']);
+
+app.config(
+
+function (STORMPATH_CONFIG,$routeProvider) {
+
+    // Specify your Client API domain here:
+
+    STORMPATH_CONFIG.ENDPOINT_PREFIX = 'https://subtle-racer.apps.stormpath.io';
+	
+	 $routeProvider
+    .when("/", {
+        templateUrl : "index.html"
+    });
+  });
+  
+  
+  
+  app.run(function($stormpath){
+    $stormpath.ngRouter({
+      forbiddenRoute: '/forbidden',
+      defaultPostLoginRoute: '/',
+      loginRoute: '/login'
+    });
+  });
 
 app.controller("sideWallCtrl",function($scope){
 	$scope.jobs=[
