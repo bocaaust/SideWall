@@ -274,7 +274,21 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEoptZSQamw508wzZu3Ds1zuCv0jdas_w&callback=initMap">
     </script>-->
-    <img class="img-circle" src="http://1.bp.blogspot.com/_tUsg4205_xs/S5ICiKzsyLI/AAAAAAAABHA/8bgYrJtNpyQ/s400/map-google.gif" alt="map" style="height:16.66666667vw; width:16.667vw;padding-left:0vw;">
+    <div id="map{{::$id}}" style="height:16.66666667vw; width:16.667vw;padding-left:0vw;"></div>
+    <script type="text/javascript">
+      function initMap() {
+        var uluru = {lat: {{job.latitude}}, lng: {{job.longitude}}};
+        var map = new google.maps.Map(document.getElementById('map{{::$id}'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <!--<img class="img-circle" src="http://1.bp.blogspot.com/_tUsg4205_xs/S5ICiKzsyLI/AAAAAAAABHA/8bgYrJtNpyQ/s400/map-google.gif" alt="map" style="height:16.66666667vw; width:16.667vw;padding-left:0vw;">-->
 </div>
 <div class="col-xs-6" style="padding-right:0px;">
 	<h4>{{job.title}}</h4>
@@ -481,7 +495,9 @@
 </div>
                
             </div>
-        
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
   </body>
 </html>
 
