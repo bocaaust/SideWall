@@ -293,8 +293,13 @@
   width="16.667vw"
   height="16.667vw"
   frameborder="0" style="border:0"
-  src='{{makeURL()}}' allowfullscreen>
+  ng-src="{{makeURL(job.latitude,job.longitude)}}" allowfullscreen>
 </iframe>
+<!--<script type="text/javascript">
+	var lat = {{job.latitude}};
+	var long = {{job.longitude}};
+	$('#map{{::$id}}').attr('src',"https://www.google.com/maps/embed/v1/place?key=AIzaSyB9OK1uOWPkJNLZve24Fo6L4qoQwo9KMqY&center=" + lat + "," + long + "&zoom=18",);	
+</script>-->
 </div>
 <div class="col-xs-6" style="padding-right:0px;">
 	<h4>{{job.title}}</h4>

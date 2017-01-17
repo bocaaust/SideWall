@@ -30,18 +30,15 @@ function (STORMPATH_CONFIG,$routeProvider) {
 
 app.controller("sideWallCtrl",function($scope){
 	
-	$scope.makeURL = function() {
-		return "https://www.google.com/maps/embed/v1/place?key=AIzaSyB9OK1uOWPkJNLZve24Fo6L4qoQwo9KMqY
-    &center=" + $scope.jobs.location + "&zoom=18";
-	}
+	
 			  
 	$scope.jobs=[
 		{
 			title:"Seeking SECURITY MGR with 2 years of experience in security",
 			address:"123 Weigh Way",
 			numRoutes:"12",
-			location:"42.3314,-83.0458",
-			
+			latitude:"42.3314",
+			longitude:"-83.0458",
 			description:"American Protection Group (APG) a rate A+ Business Member of the Better Business Bureau (BBB) is seeking a manager with a CLASS MB License OR individual that can qualify for a Class MB license for both A and B licenses that we already have. American Protection Group is expanding to the Florida market and is currently licensed in CA, NV, AZ and FL, now in the process of expanding to TX and NM. We are seeking a qualified applicant with a CLASS MB license or someone whom can take the exam and become our manager for the FL market."
 			
 		},
@@ -49,7 +46,8 @@ app.controller("sideWallCtrl",function($scope){
 			title:"Veterinary Technician/Assistant",
 			address:"456 Play Place",
 			numRoutes:"7",
-			location:"42.3314,-83.0458",
+			latitude:"42.3314",
+			longitude:"-83.0458",
 			description:"This is a test"
 			
 		},
@@ -57,9 +55,14 @@ app.controller("sideWallCtrl",function($scope){
 			title:"Restaurant Crew Member, Shift Leader",
 			address:"123 Weigh Way",
 			numRoutes:"12",
-			location:"42.3314,-83.0458",
+			latitude:"42.3314",
+			longitude:"-83.0458",
 			description:""
 			
 		}
 	];
+	
+	$scope.makeURL = function(lat, long) {
+		return 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB9OK1uOWPkJNLZve24Fo6L4qoQwo9KMqY&center='+lat+','+long+'&zoom=18';
+	};
 });
