@@ -1,4 +1,4 @@
-var app=angular.module("sideWallApp",['ngRoute','stormpath', 'stormpath.templates']);
+ [$interpolate:interr]  [$interpolate:interr]  [$interpolate:interr]  [$interpolate:interr] var app=angular.module("sideWallApp",['ngRoute','stormpath', 'stormpath.templates']);
 
 app.config(
 
@@ -39,6 +39,7 @@ app.controller("sideWallCtrl",function($scope){
 			numRoutes:"12",
 			latitude:"42.3314",
 			longitude:"-83.0458",
+			location:"https://www.google.com/maps/embed/v1/place?key=AIzaSyB9OK1uOWPkJNLZve24Fo6L4qoQwo9KMqY&center=42.3314,-83.0458&zoom=18",
 			description:"American Protection Group (APG) a rate A+ Business Member of the Better Business Bureau (BBB) is seeking a manager with a CLASS MB License OR individual that can qualify for a Class MB license for both A and B licenses that we already have. American Protection Group is expanding to the Florida market and is currently licensed in CA, NV, AZ and FL, now in the process of expanding to TX and NM. We are seeking a qualified applicant with a CLASS MB license or someone whom can take the exam and become our manager for the FL market."
 			
 		},
@@ -48,6 +49,7 @@ app.controller("sideWallCtrl",function($scope){
 			numRoutes:"7",
 			latitude:"42.3314",
 			longitude:"-83.0458",
+			location:"https://www.google.com/maps/embed/v1/place?key=AIzaSyB9OK1uOWPkJNLZve24Fo6L4qoQwo9KMqY&center=42.3314,-83.0458&zoom=18",
 			description:"This is a test"
 			
 		},
@@ -57,7 +59,8 @@ app.controller("sideWallCtrl",function($scope){
 			numRoutes:"12",
 			latitude:"42.3314",
 			longitude:"-83.0458",
-			description:""
+			location:"https://www.google.com/maps/embed/v1/place?key=AIzaSyB9OK1uOWPkJNLZve24Fo6L4qoQwo9KMqY&center=42.3314,-83.0458&zoom=18",
+			description:"this is also a test"
 			
 		}
 	];
