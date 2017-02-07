@@ -1,0 +1,160 @@
+<html>
+<body>
+<h2> SideWall API</h2>
+<p>The API returns a Wrapper object with two fields : <br>
+{ <br>
+"data":"some data",<br>
+"message":""<br>
+}<br>
+</p>
+<ol>
+<li>
+	<ul>
+		<li> Method : @POST</li>
+		<li> URL :  www.sidewall.tech/webapi/authentication/register</li>
+		<li>Consumes : { <br>
+			"email":"user@domain.com",<br>
+			"password": "mypassword",<br>
+			}<br>
+		</li>
+		<li>Produces : {<br>
+			"data": {<br>
+			"type": "user",<br>
+			"email": "user@domain.com",<br>
+			"id": 1,<br>
+			"lattitude": 0,<br>	
+			"longitude": 0,<br>
+			"password": "User Password"<br>
+			},<br>
+			"message": "User Registered"<br>
+			}<br>
+		</li>
+	</ul>
+</li>
+<li>
+	<ul>
+		<li> Method : @POST</li>
+		<li> URL :  www.sidewall.tech/webapi/authentication/login</li>
+		<li>Consumes : { <br>
+			"email":"user@domain.com",<br>
+			"password": "mypassword",<br>
+			}<br>
+		</li>
+		<li>Produces : {<br>
+			"data": {<br>
+			"type": "session",<br>
+			"id": 22,<br>
+			"token": "ea4da7ac-4199-47b1-9bfb-0846610889b1",<br>
+			"user": {<br>
+			"email": "user@domain.com",<br>
+			"id": 1,<br>
+			"interests": [],<br>
+			"lattitude": 0,<br>
+			"longitude": 0,<br>
+			"offers": [],<br>
+			"password": "User Password"<br>
+			},<br>
+			"validity": "2017-02-06T05:35:16.877-05:00"<br>
+			},<br>
+			"message": "User Logged In"<br>
+			}<br>
+
+		</li>
+	</ul>
+</li>
+<li>
+	<ul>
+		<li> Method : @POST</li>
+		<li> URL :  www.sidewall.tech/webapi/authentication/logout</li>
+		<li>Consumes : {<br>
+			"data": {<br>
+			"type": "session",<br>
+			"id": 22,<br>
+			"token": "ea4da7ac-4199-47b1-9bfb-0846610889b1",<br>
+			"user": {<br>
+			"email": "user@domain.com",<br>
+			"id": 1,<br>
+			"interests": [],<br>
+			"lattitude": 0,<br>
+			"longitude": 0,<br>
+			"offers": [],<br>
+			"password": "User Password"<br>
+			},<br>
+			"validity": "2017-02-06T05:35:16.877-05:00"<br>
+			},<br>
+			"message": "User Logged In"<br>
+			}<br>
+		</li>
+		<li>Produces : {<br>
+			"message": "User logged Out"<br>
+			}<br>
+		</li>
+	</ul>
+</li>
+<li>
+	<ul>
+		<li> Method : @GET</li>
+		<li> URL :  www.sidewall.tech/webapi/job/all</li>
+		<li>Produces : {<br>
+			"data": [<br>
+			  {<br>
+			"type": "job",<br>
+			"city": "melbourne",<br>
+			"contactNumber": "7652376537",<br>
+			"description": "Sample Job Description",<br>
+			"email": "Job@someemployer.com",<br>
+			"id": 1,<br>
+			"interestedUser": [],<br>
+			"latitude": 28.0654,<br>
+			"line1": "220 East University Boulevard",<br>
+			"line2": "",<br>
+			"longitude": -80.6168,<br>
+			"pincode": 32901,<br>
+			"state": "Florida",<br>
+			"title": "Sample Job"<br>
+			}<br>
+			],<br>
+			"message": "Jobs Found"<br>
+			}<br>
+		</li>
+	</ul>
+</li>
+<li>
+	<ul>
+		<li> Method : @GET</li>
+		<li> URL :  www.sidewall.tech/webapi/job/all?lattitude=26.738237&longitude=25.2637326</li>
+		<li>Produces : {<br>
+			"data": [<br>
+			  {<br>
+			"type": "job",<br>
+			"city": "melbourne",<br>
+			"contactNumber": "7652376537",<br>
+			"description": "Sample Job Description",<br>
+			"email": "Job@someemployer.com",<br>
+			"id": 1,<br>
+			"interestedUser": [],<br>
+			"latitude": 28.0654,<br>
+			"line1": "220 East University Boulevard",<br>
+			"line2": "",<br>
+			"longitude": -80.6168,<br>
+			"pincode": 32901,<br>
+			"state": "Florida",<br>
+			"title": "Sample Job"<br>
+			}<br>
+			],<br>
+			"message": "Jobs Found"<br>
+			}<br>
+		</li>
+	</ul>
+</li>
+<li>
+	<ul>
+		<li> Method : @GET</li>
+		<li> URL :  www.sidewall.tech/webapi/user??lattitude=26.738237&longitude=25.2637326</li>
+		<li>Produces :
+		</li>
+	</ul>
+</li>
+</ol>
+</body>
+</html>

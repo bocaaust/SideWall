@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Social Job Board and Ride Sharing Website Helping More People Get Jobs Regardless of Whether You Own a Car">
+  <meta name="keywords" content="Cars,Detroit,Jobs,Ridesharing,Opensource,Work,Regrowth">
+  <meta name="author" content="Austin Lubetkin">
+    <title>SideWall</title>
+    <!-- Bootstrap -->
+	<style type="text/css">
+	@import url("css/animate.css");
+	@import url("css/center.css");
+	@import url("css/bootstrap.css");
+	@import url("css/mobileView.css");
+    </style>
+	
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  </head>
+  <body ngApp="SideWallApp" > <!-- style="background-color:#E2E5CC;">-->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-1.11.3.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="js/bootstrap.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/stormpath-sdk-angularjs.min.js"></script>
+	<script src="js/stormpath-sdk-angularjs.tpls.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<div ng-view>
+    <div class="container-fluid" style="overflow-x:hidden;" ng-app="sideWallApp" ng-controller="sideWallCtrl">
+  <div class="row" >
+    	<div class="container" style="bottom:-1.5vh; height:16vh; background-color:#f9f9f9;border-bottom:solid 1px #b2b2b2; position: fixed; width:100%; z-index:2;padding:0px;">
+	
+    	<ul class="nav imgButton" style="margin-left:0px;">
+       
+       <div class="col-xs-2 col-sm-offset-0 col-xs-offset-1 col-sm-4" style="padding-top:3vh; padding-bottom:3vh; margin-right:10%;">
+        <li>
+    	
+        	<a data-toggle="tab" href="#job" style="z-index:4" >
+        	<img src="img/job.png" style="height:10vh; padding-left:70%;">
+            </a>
+        
+        </li>
+        </div>
+        
+        <div class="col-xs-2" style="padding-top:3vh;padding-bottom:3vh; width: 20.333333%;">
+        <li class="active col-sm-offset-2 col-xs-offset-3 col">
+    	
+        	<a data-toggle="tab" href="#home" >
+        	<img src="img/home.png" style="height:10vh;">
+            </a>
+        
+        </li>
+        </div>
+        
+        <div class="col-xs-2 col-xs-offset-1" style="padding-top:3vh;padding-bottom:3vh;">
+        <li>
+    	
+        	<a data-toggle="tab" href="#map" >
+        	<img src="img/map.png" style="height:10vh;">
+            </a>
+        
+        </li>
+        </div>
+        
+        </ul>
+    </div>
+    </div>
+    
+    <div class="tab-content" id="main">
+                         <div id="home" class="tab-pane fade in active">
+                         <div style="margin-bottom:20vh;">
+				<img src="img/image.png" class="show-desktop" style="position:fixed; bottom:16vh; left:4vw; width:20vw;z-index:2;">
+                         <!--
+                        		 <img src="img/square1.png" alt="background" style="position:fixed;z-index:0;bottom:20vw;left:0px;width:10vw;">
+                                <img src="img/square2.png" alt="background" style="position:fixed;z-index:0;bottom:10vw;left:0px;width:10vw;">
+                                <img src="img/square1.png" alt="background" style="position:fixed;z-index:0;bottom:30vw;left:0px;width:10vw;">
+                                <img src="img/square4.png" alt="background" style="position:fixed;z-index:0;bottom:40vw;left:0px;width:10vw;">
+                                <img src="img/square2.png" alt="background" style="position:fixed;z-index:0;bottom:50vw;left:0px;width:10vw;">
+                                <img src="img/square1.png" alt="background" style="position:fixed;z-index:0;bottom:60vw;left:0px;width:10vw;">
+                                <img src="img/square4.png" alt="background" style="position:fixed;z-index:0;bottom:70vw;left:0px;width:10vw;">
+                                <img src="img/square3.png" alt="background" style="position:fixed;z-index:0;bottom:80vw;left:0px;width:10vw;">
+                                <img src="img/square1.png" alt="background" style="position:fixed;z-index:0;bottom:90vw;left:0px;width:10vw;">
+                                <img src="img/square2.png" alt="background" style="position:fixed;z-index:0;bottom:100vw;left:0px;width:10vw;">
+                                <img src="img/square4.png" alt="background" style="position:fixed;z-index:0;bottom:110vw;left:0px;width:10vw;">
+                                <img src="img/square1.png" alt="background" style="position:fixed;z-index:0;bottom:120vw;left:0px;width:10vw;">
+                                <img src="img/square3.png" alt="background" style="position:fixed;z-index:0;bottom:130vw;left:0px;width:10vw;">-->
+                         <!--
+                         <div class="row" style="max-height:700px;; overflow:hidden;">
+                         	<div class="col-xs-1" style="margin:0px; padding:0px;">
+                            	<img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square3.png" width="100%" alt="background">
+                                <img src="img/square4.png" width="100%" alt="background">
+                                <img src="img/square2.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                            </div>
+                            <div class="col-xs-11 col-sm-6">
+                           	  <div class="row" style="background-color:#E5EFF0;">
+                                	<div class="col-sm-10 col-sm-offset-1">
+                                    
+                                	<h1 style="display:inline;">SideWall </h1><h4 style="display:inline;">can connect people already in a community who need jobs and can't afford cars/transit with other members of that community who can rideshare on their way to jobs at similar locations. More people get jobs because more people can commute to the areas that are experiencing economic growth regardless of where they originally live in that city. People find jobs on our job board and can make "connections" with registered profiles/routes on a map that match their job criteria. They then can message other users profiles and work out details.</h4>
+                                   
+                                   <div class="row" style="margin-top:8px;">
+                                     <div class="container-fluid">-->
+                                   <!-- <div sp-login-form></div>-->
+                                    <!--</div>
+                                     </div>
+                                     </div>
+                                </div>
+                                <div class="row">
+                                	<div class="col-xs-3"  style="margin:0px; padding:0px;">
+                                    	<img src="img/square4.png" width="100%" alt="background">
+                                <img src="img/square2.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square3.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                    </div>
+                                    <div class="col-xs-2"  style="margin:0px; padding:0px;">
+                                    <img src="img/square4.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square3.png" width="100%" alt="background">
+                                <img src="img/square2.png" width="100%" alt="background">
+                                <img src="img/square4.png" width="100%" alt="background">
+                                    </div>
+                                    <div class="col-xs-1"  style="margin:0px; padding:0px;">
+                                   
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square2.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square4.png" width="100%" alt="background">
+                                    </div>
+                                  <div class="col-xs-3"  style="margin:0px; padding:0px;">
+                                    	<img src="img/square4.png" width="100%" alt="background">
+                                <img src="img/square2.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square3.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                    </div>
+                                    <div class="col-xs-2"  style="margin:0px; padding:0px;">
+                                    <img src="img/square4.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square3.png" width="100%" alt="background">
+                                <img src="img/square2.png" width="100%" alt="background">
+                                <img src="img/square4.png" width="100%" alt="background">
+                                    </div>
+                                    <div class="col-xs-1"  style="margin:0px; padding:0px;">
+                                    <img src="img/square3.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square2.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square4.png" width="100%" alt="background">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-2" style="margin:0px; padding:0px;">
+                            	<img src="img/square3.png" width="100%" alt="background">
+                                <img src="img/square2.png" width="100%" alt="background">
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square3.png" width="100%" alt="background">
+                                <img src="img/square4.png" width="100%" alt="background">
+                            </div>
+                            <div class="col-xs-3"  style="margin:0px; padding:0px;">
+                            	<img src="img/square4.png" width="100%" alt="background">
+                               
+                                <img src="img/square1.png" width="100%" alt="background">
+                                <img src="img/square3.png" width="100%" alt="background">
+                                <img src="img/square4.png" width="100%" alt="background">
+                            </div>
+                         </div>
+                         
+                         <img  class="animated fadeInUp da show-desktop" src="img/detroit1.jpg" alt="detroit" style="position:fixed; z-index:3; width:30vw; right:12vw; top:10vh;">
+                         <img  class="animated fadeInUp zz show-desktop" src="img/detroit2.jpg" alt="detroit" style="position:fixed; z-index:4; width:15vw; right:30vw; top:35vh;">
+                          <img  class="animated fadeInUp za show-desktop" src="img/detroit3.jpeg" alt="detroit" style="position:fixed; width:25vw; right:8vw; top:45vh;z-index:2;">
+                         
+                        -->
+                        <div class="row" is-user>
+                        <div class="container-fluid" style="margin-bottom:12px;">
+                        <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">SideWall</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">HOME</a></li>
+        <li><a href="API.html">WEB-API</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+                        
+                        <h1 style="display:inline;">SideWall </h1><h4 style="display:inline;">can connect people already in a community who need jobs and can't afford cars/transit with other members of that community who can rideshare on their way to jobs at similar locations. More people get jobs because more people can commute to the areas that are experiencing economic growth regardless of where they originally live in that city. People find jobs on our job board and can make "connections" with registered profiles/routes on a map that match their job criteria. They then can message other users profiles and work out details.</h4></div>
+                        
+                        	<div class="row" style="margin: 8px;">
+                        	<div class="col-xs-12 col-sm-4 col-sm-offset-4 col-xs-offset-0 text-center">
+								<button class="btn" data-toggle="tab" href="#login" >Login</button>
+								<button class="btn" data-toggle="tab" href="#register" >Register</button>
+								</div>
+							</div>
+                       <div class="tab-content">
+                       <div class="tab-pane fade in active" id="mainHome">
+                       <div class="col-sm-7 col-sm-offset-0 col-xs-offset-0 col-xs-12">
+                        	<img src="https://www.dmxzone.com/downloads/images/Image013_16.png" width="100%" class="img-thumbnail animated zoomIn first">
+                        </div>
+                        <!--Driver Example-->
+                        <div class="col-xs-8 col-sm-3 col-xs-offset-2 col-sm-offset-1 mobile-center">
+                        <!--Profile Image-->
+                        	<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQN-VCcb_mrsPCwX2QgqGLQ6HYsiheBCym6cDbwcj9SY-fhPisJ" width="100%" class="img-circle img-thumbnail" style="margin-bottom:8px; margin-top:8px;">
+                            <div class="row">
+                            <div class="col-xs-12 col-sm-6">
+                        	<h4>Jane Doe</h4>
+                            <p>Registered Driver</p>
+                            <p>2011 Honda Prius</p>
+                            
+                            </div>
+                             <div class="col-xs-12  col-sm-6">
+                            <h4>Home</h4>
+                            <p>1234 Lane LN</p>
+                            <p>Detroit, MI, 00000</p>
+                            <h4>Work</h4>
+                            <p>1234 Street ST</p>
+                            <p>Detroit, MI, 00000</p>
+                        </div>
+                       </div>
+                        </div>
+                        </div>
+                        <div class="tab-pane fade in" id="login">
+                        <div class="row">
+                       		
+                        		<div class="well col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4" style="padding:16px;">
+									<h3>Login</h3>
+                        			<form>
+                        			<div class="form-group">
+    <label for="InputEmail1">Email address</label>
+    <input type="email" class="form-control" id="InputEmail1" placeholder="Enter email">
+    
+  </div>
+								<div class="form-group">
+    <label for="InputPassword1">Password</label>
+    <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+  </div>
+								<button type="submit" class="btn btn-primary" href="#mainHome" data-toggle="tab">Submit</button>
+									</form>
+							</div> 
+							</div>
+						   </div>
+                       <div class="tab-pane fade in" id="register">
+                        <div class="row">
+                        		<div class="well col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4" style="padding:16px;">
+									<h3>Register</h3>
+                        			<form>
+                        			<div class="form-group">
+    <label for="InputEmail2">Email address</label>
+    <input type="email" class="form-control" id="InputEmail2" placeholder="Enter email">
+    
+  </div>
+								<div class="form-group">
+    <label for="InputPassword2">Password</label>
+    <input type="password" class="form-control" id="InputPassword2" placeholder="Password">
+  </div>
+								<button type="submit" class="btn btn-primary" href="#mainHome" data-toggle="tab">Submit</button>
+									</form>
+							</div> 
+							</div>
+						   </div>
+                        <div class="row" is-user>
+                        <!--<h4>Requests</h4>
+							<div class="row">
+                            	
+                            </div>-->
+                        </div>
+                        <!--<div class="row" if-not-user>
+                        <div sp-login-form></div>
+                        </div>-->
+                        </div>
+                         </div>
+							 </div>
+		</div>
+                         <div id="job" class="tab-pane fade in ">
+                         <div class="row text-center" style="position:fixed; width:100%; top:0px;z-index:2; height:46.5px;">
+                         <ul class="nav row topBar">
+                         <li class="active col-xs-6" style="height:46.5px;">
+                         <h4 data-toggle="tab" href="#jobsMain" >Jobs</h4>
+                         </li>
+                         <li class=" col-xs-6" style="height:46.5px;">
+                         <h4 data-toggle="tab" href="#Collection" >Contact</h4>
+                         </li>
+                         </ul>
+                         </div>
+                         
+				<div class="tab-content" style="margin-top:57px;margin-bottom:20vh;">
+               	  <div id="jobsMain" class="tab-pane fade in active">
+                  <!--Search Implementation-->
+                        <form class="form-search">
+    
+    <div class="input-prepend">
+        <button type="submit" class="btn" style="width:20vw;margin-left:3vw;">Search</button>
+        <input type="text" class="span2 search-query" style="width:66vw;">
+    </div>
+</form>
+                   	<h4>Recent</h4>
+                        <form>
+                        <div class="row" ng-repeat="job in jobs">
+
+
+
+                        <div class="row" style="display:block;margin-left:-3px; margin-bottom:6px;" >
+                        <div class="col-xs-1 col-xs-offset-1" style="margin-top:8.16vw; ">
+                        <div class="checkbox" >
+  <label><input type="checkbox" value=""><a style="display:none;">{{::$id}}</a></label>
+</div>
+</div>
+<div class="col-xs-2" style="padding:0px;">
+	<!--<div id="gmap" class="mapBox"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('gmap'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEoptZSQamw508wzZu3Ds1zuCv0jdas_w&callback=initMap">
+    </script>--><!--
+    <div id="map-{{::$id}}" style="height:16.66666667vw; width:16.667vw;padding-left:0vw;"></div>
+    <script type="text/javascript">
+      function initMap() {
+        var uluru = {lat: {{job.latitude}}, lng: {{job.longitude}}};
+        var map = new google.maps.Map(document.getElementById('map-{{::$id}'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>-->
+    <!--<img class="img-circle" src="http://1.bp.blogspot.com/_tUsg4205_xs/S5ICiKzsyLI/AAAAAAAABHA/8bgYrJtNpyQ/s400/map-google.gif" alt="map" style="height:16.66666667vw; width:16.667vw;padding-left:0vw;">-->
+    <iframe
+  width="16.667vw"
+  height="16.667vw"
+  frameborder="0" style="border:0"
+  src={{makeURL()}} allowfullscreen>
+</iframe>
+<!--<script type="text/javascript">
+	var lat = {{job.latitude}};
+	var long = {{job.longitude}};
+	$('#map{{::$id}}').attr('src',"https://www.google.com/maps/embed/v1/place?key=AIzaSyB9OK1uOWPkJNLZve24Fo6L4qoQwo9KMqY&center=" + lat + "," + long + "&zoom=18",);	
+</script>-->
+</div>
+<div class="col-xs-6" style="padding-right:0px;">
+	<h4>{{job.title}}</h4>
+    <p>{{job.address}} - {{job.numRoutes}} matching Routes</p> 
+</div>
+<div class="col-xs-1" style="margin-left:0px;padding-left:0px;">
+	<a data-toggle="collapse" ng-href="#{{::$id}}" id="arrowCollapse">
+    	<img src="img/more2.png" class="sideArrow rotate" alt="More Information">
+    </a>
+</div>
+</div>
+<div class="row">
+<div class="infoBox collapse" id="{{::$id}}">
+	<div class="col-xs-10 col-xs-offset-1">
+    	<div class="container-fluid">
+        	<p>{{job.description}}</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!--Collaps Items Below-->
+<!--<div class="row" style="margin-top:16px; display:block; margin-left:-3px;">
+
+	<a data-toggle="collapse" data-target="#moreJobItems">
+    	
+		<img src="img/more.png" class="img-responsive" alt="Show More" style="width:6vw; height:3vw; opacity:0.8; filter: opacity(80); margin-left:46vw;" id="arrow">
+        
+    </a>
+    
+</div>
+
+<div class="collapse" id="moreJobItems">
+<div class="row">
+<div class="row" style="margin-top:8px; display:block; margin-left:-3px;">
+                        <div class="col-xs-1 col-xs-offset-1" >
+                        <div class="checkbox" >
+  <label><input type="checkbox" value=""><a style="display:none;">"ID:1234</a></label>
+</div>
+</div>
+<div class="col-xs-2" >
+	<!--<div id="gmap" class="mapBox"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('gmap'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEoptZSQamw508wzZu3Ds1zuCv0jdas_w&callback=initMap">
+    </script>
+    <img class="img-circle" src="http://1.bp.blogspot.com/_tUsg4205_xs/S5ICiKzsyLI/AAAAAAAABHA/8bgYrJtNpyQ/s400/map-google.gif" alt="map" width="100%">
+</div>
+<div class="col-xs-7">
+	<h4> Restaurant Crew Member, Shift Leader</h4>
+    <p>123 Weigh Way - 12 matching Routes</p> 
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+-->
+
+
+                        </form>
+                        
+                    </div>
+                    <div id="Collection" class="tab-pane fade in">
+                    	<div class="container-fluid">
+                    	<h2>3 matching Routes</h2>
+             			<h4>Seeking SECURITY MGR with 2 years of experience in security</h4>
+                        <div class="row">
+                        	<div class="col-xs-2 col-sm-offset-1 col-sm-2">
+                            	<div class="container-fluid" style="margin-bottom:8px;">
+                            	<a href="do a maill to on email address"><img src="img/mail.png" style="width:12vw;margin-right:8px;"></a>
+                           </div>
+                            </div>
+                            <div class="col-xs-7 col-xs-offset-1 col-sm-8 col-sm-offset-0">
+                            	<p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN <i>(Within 0.5 miles of selected job)</i></p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-xs-2 col-sm-offset-1 col-sm-2">
+                            <div class="container-fluid" style="margin-bottom:8px;">
+                            	<a href="do a maill to on email address"><img src="img/mail.png" style="width:12vw;margin-right:8px;"></a>
+                           </div>
+                            </div>
+                            <div class="col-xs-7 col-xs-offset-1 col-sm-8 col-sm-offset-0">
+                            	<p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN <i>(Within 0.5 miles of selected job)</i></p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                
+                            </div>
+                        </div>
+                        <h4>Veterinary Technician/Assistant</h4>
+                        <div class="row">
+                        
+                        	<div class="col-xs-2 col-sm-offset-1 col-sm-2">
+                            <div class="container-fluid" style="margin-bottom:8px;">
+                            	<a href="do a maill to on email address"><img src="img/mail.png" style="width:12vw;margin-right:8px;"></a>
+                           </div>
+                            </div>
+                            <div class="col-xs-7 col-xs-offset-1 col-sm-8 col-sm-offset-0">
+                            	<p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN <i>(Within 0.5 miles of selected job)</i></p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                
+                            </div>
+                        </div>
+                      	<!--<img src="https://i.imgur.com/mM82YXg.png" class="img-responsive img-thumbnail" alt="Collection Map" style="width:50vw; margin-left:25vw;">-->
+                        
+                        
+                        </div>
+                    </div>
+                </div>
+
+                         </div>
+                         <div id="map" class="tab-pane fade in ">
+                         
+                         <div class="row" style="height:50vh;">
+                         <img src="http://www.fuckedupstartups.com/wp-content/uploads/2015/07/ws_google_map.jpg" style="width:100vw;height:50vh;">
+                         </div>
+                         <div class="container-fluid" style="margin-bottom:20vh;">
+                         <h3>Drivers Nearby</h3>
+                         <div class="row">
+                         	<div class="col-sm-3 col-xs-6 col-sm-offset-0 col-xs-offset-0">
+                           
+                            <p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN</p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                <a><p>Contact</p></a>
+                                
+                            </div>
+                            <div class="col-sm-3 col-xs-6 col-sm-offset-0 col-xs-offset-0">
+                            <p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN</p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                <a><p>Contact</p></a>
+                            </div>
+                            <div class="col-sm-3 col-xs-6 col-sm-offset-0 col-xs-offset-0">
+                            <p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN</p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                <a><p>Contact</p></a>
+                            </div>
+                            <div class="col-sm-3 col-xs-6 col-sm-offset-0 col-xs-offset-0">
+                            <p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN</p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                <a><p>Contact</p></a>
+                            </div>
+                            <div class="col-sm-3 col-xs-6 col-sm-offset-0 col-xs-offset-0">
+                            <p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN</p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                <a><p>Contact</p></a>
+                            </div>
+                            <div class="col-sm-3 col-xs-6 col-sm-offset-0 col-xs-offset-0">
+                            <p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN</p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                <a><p>Contact</p></a>
+                            </div>
+                            <div class="col-sm-3 col-xs-6 col-sm-offset-0 col-xs-offset-0">
+                            <p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN</p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                <a><p>Contact</p></a>
+                            </div>
+                            <div class="col-sm-3 col-xs-6 col-sm-offset-0 col-xs-offset-0">
+                            <p><strong>Jane Doe</strong></p>
+                                <p><strong>Works At:</strong> 123 Lane LN</p>
+                                
+                                <p><strong>Drives:</strong> Ford Fusion</p>
+                                <a><p>Contact</p></a>
+                            </div>
+                         </div>
+                         </div>
+                         </div>
+      </div>
+</div>
+               
+            </div>
+        <!--<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>-->
+  </body>
+</html>
+
+	<!-- Angular Material requires Angular.js Libraries -->
+    <script src="https://code.jquery.com/jquery-2.1.4.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"> </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>    
+
+	<!-- My Own Files  -->
+	<script type="text/javascript" src="js/angular-setup.js"></script>
+	<script type="text/javascript" src="js/myMainController.js"></script>
+	
+<script type="text/javascript">
+	$(".imgButton .col-xs-2 li").on("click", function(){
+		//var selector2 =  $this.attr('href')
+   $(".imgButton .col-xs-2 li").removeClass("active");
+    $(".imgButton .col-xs-4 li").removeClass("active");
+   //$(this).addClass("active");
+});
+
+//arrow flip functions
+
+$('#moreJobItems').on('hidden.bs.collapse', function (event) {  
+  $('#arrow').attr("src","img/more.png");
+}).on('shown.bs.collapse', function (event) {
+	$('#arrow').attr("src","img/more2.png"); 
+	});
+	$('#info123').on('hidden.bs.collapse', function (event) { 
+		//var selector2 =  $this.attr('href')
+   //$(".sideArrow").removeClass("rotate");
+   // $(".imgButton .col-xs-4 li").removeClass("active");
+   $("a img").removeClass("rotate");
+   }).on('shown.bs.collapse', function (event) {
+	  $("a img").addClass("rotate"); 
+});
+	//$(".sideArrow").on("click", function(){
+		//var selector2 =  $this.attr('href')
+   //$(".sideArrow").removeClass("rotate");
+   // $(".imgButton .col-xs-4 li").removeClass("active");
+   
+//});
+
+</script>

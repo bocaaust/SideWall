@@ -1,0 +1,1 @@
+var EximApp = angular.module('SideWallApp', ['ngMaterial','ngStorage','ngMdIcons','ngRoute']);
